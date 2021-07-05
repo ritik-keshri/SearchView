@@ -1,14 +1,12 @@
 package com.example.searchview;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
-
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import java.lang.reflect.Array;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -36,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         data.add("Networking");
         Collections.sort(data);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,data);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,data);
         listView.setAdapter(adapter);
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
